@@ -30,7 +30,9 @@ After the process is completed install dependencies, you require at least npm 18
 
 ```
 npm install
+npx tailwindcss init -p
 ```
+I recommend you pasting the contents of the folder and replace the default files with the included ones.
 
 Once all is installed you can create your first resource (I've included a todo view example):
 
