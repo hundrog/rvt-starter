@@ -17,32 +17,26 @@ If you are starting a new project is recommended to initialize it without the de
 ```
 rails new myapp -J
 ```
-
 Then add the next 2 gems to your gemfile
-
 ```
 gem "vite_rails"
 gem "inertia_rails"
 ````
 Then run `bundle install`and after that `bundle exec vite install`. This will setup your project to work with vite
 
-After the process is completed install dependencies, you require at least npm 18
+Then copy the contents of this repo in to yor rails root folder and install dependencies, you require at least npm 18
 
 ```
 npm install
 npx tailwindcss init -p
 ```
-I recommend you pasting the contents of the folder and replace the default files with the included ones.
-
 Once all is installed you can create your first resource (I've included a todo view example):
 
 ```
 rails g scaffold Todo name:string done:boolean --skip-template-engine
 rails db:migrate
 ```
-
 In your todos_controller add the next code
-
 ```
   def index
     @todos = Todo.all
@@ -51,5 +45,4 @@ In your todos_controller add the next code
     }
   end
 ```
-
 Run your services in 2 terminals `rails s` & `./bin/vite dev`, then navigate to `/todos`
